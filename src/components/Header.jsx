@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const Header = () => {
   return (
@@ -7,7 +7,7 @@ const Header = () => {
         <h1>
           <span
             style={{
-              color: "#F9D949",
+              color: "#FEFF86",
             }}
           >
             Yellow
