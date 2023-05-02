@@ -6,7 +6,15 @@ export default function App() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [notes, setNotes] = useState([]);
+  const [pen, setPen] = useState(false);
+  const [trash, setTrash] = useState(false);
 
+  // const handleMouseOver = () => {
+  //   setActive(true);
+  // };
+  // const handleMouseOut = () => {
+  //   setActive(false);
+  // };
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title !== "" && description !== "") {
@@ -32,10 +40,30 @@ export default function App() {
           <div className="note-box" key={item.id}>
             <p className="note-title">{item.title}</p>
             <p className="note-description">{item.description}</p>
-            
+            <div className="btn">
+              <i
+                className={
+                  pen
+                    ? "fa-sharp fa-solid fa-pen fa-shake"
+                    : "fa-sharp fa-solid fa-pen"
+                }
+                onMouseOver={() => setPen(true)}
+                onMouseOut={() => setPen(false)}
+                style={{ color: "black" }}
+              ></i>
+              <i
+                className={
+                  trash
+                    ? "fa-sharp fa-solid fa-trash fa-shake"
+                    : "fa-sharp fa-solid fa-trash"
+                }
+                onMouseOver={() => setTrash(true)}
+                onMouseOut={() => setTrash(false)}
+                style={{ color: "red" }}
+              ></i>
+            </div>
           </div>
         ))}
-
         <form onSubmit={handleSubmit}>
           <div className="note-box">
             <input

@@ -93,3 +93,15 @@ p.note-description{
   /* outline: none; */
   transform: 0.4s;
 }
+.btn{
+  display: flex;
+  justify-content: end;
+}
+div > i{
+  font-size: 1.2rem;
+  margin: 0 0.5rem;
+  padding: 0.8rem;
+  background-color: #FEFF86;
+  border-radius: 50%;
+  cursor: pointer;
+}
