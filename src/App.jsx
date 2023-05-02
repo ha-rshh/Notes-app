@@ -30,8 +30,9 @@ export default function App() {
       <div className="note-container">
         {notes.map((item) => (
           <div className="note-box" key={item.id}>
-            <h1>{item.title}</h1>
-            <h3>{item.description}</h3>
+            <p className="note-title">{item.title}</p>
+            <p className="note-description">{item.description}</p>
+            
           </div>
         ))}
 
@@ -45,6 +46,8 @@ export default function App() {
               placeholder="Title"
               name="description"
               autoComplete="off"
+              maxLength={20}
+              required
             />
             <textarea
               className="note-desc"
@@ -53,7 +56,7 @@ export default function App() {
               name="description"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-
+              required
             />
             <button type="submit" className="add-note-btn">
               Add
