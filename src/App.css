@@ -1,71 +1,92 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
-  background-color: #FFEAD2;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+body {
+  background-color: #ffead2;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-header{
+header {
+  text-align: center;
   background-color: #9198ab;
   width: 100%;
   padding: 0.5rem;
 }
-.form-container{
-  height: max-content;
-  background-color: aquamarine;
+.note-container {
+  display: grid;
+    grid-template-columns: auto auto auto auto;
+    /* justify-content: start; */
+    justify-content: center;
 }
-.notes-form{
+.note-box {
   display: flex;
-  align-items: flex-start;
-  gap: 1em;
-  padding: 1rem;
-  font-size: 1.2em;
-}
-form input {
-  padding: 0.3rem;
-  border: none;
-  border-radius: 5px;
-}
-.add-btn  {
-  padding: 0.3rem 0.5rem;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-.notes-title{
-  border-bottom: 3px solid black;
-  padding-bottom: 0.4rem;
-  margin-right: 0.5rem;
-}
-.notes-description{
-  color: rgb(50, 46, 46);
-}
-.notes-container{
-  display: flex;
+  justify-content: center;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
+  width: 300px;
+  min-width: 250px;
+  min-height: 200px;
+  padding: 1rem;
+  position: relative;
+  background-color: white;
+  border-radius: 20px;
   margin: 1rem;
+}
+.note-box > h1{
+  height: 30%;
+  border-bottom: 3px solid gray;
+}
+.note-box > h3{
+  height: 80%;
+  
+}
+.add-note-btn {
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  right: 8%;
+  bottom: 10%;
+  background-color: rgb(255, 133, 133);
+  opacity: 0.5;
+  color: black;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+.add-note-btn:hover {
+  color: white;
+
+  opacity: 0.8;
   border-radius: 5px;
+  background-color: rgb(255, F133, 133);
+}
+
+.note-title,
+.note-desc {
   padding: 0.5rem;
-  width: 250px;
-  background-color: #F7D060;
+  border: none;
+  border-bottom: 2px solid gray;
+  resize: none;
+  font-size: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.buttons{
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+.note-title:active,
+.note-desc:active {
+  outline: 1px solid darkgray;
+  outline: none;
+  transform: 0.4s;
 }
-.buttons > button{
-  padding: 0 0.5rem;
-}
-.notes-footer{
-  display: flex;
-  justify-content: space-between;
-}
-.time {
-  font-size: 0.9rem;
+.note-title:focus,
+.note-desc:focus,
+.add-note-btn:focus {
+  outline: 1px solid gray;
+  border-radius: 5px;
+  /* outline: none; */
+  transform: 0.4s;
 }
