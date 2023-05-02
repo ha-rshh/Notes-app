@@ -24,22 +24,7 @@ export default const NotesForm = () => {
     }
 
     return (
-      <div className="form-container">
-        <form className="notes-form" onSubmit={handleSubmit}>
-          <label htmlFor="notes">Title</label>
-          <input type="text" name="notes" className="notes" value={note} />
-          <label htmlFor="note-description">Describe your note</label>
-          <input
-            type="text"
-            name="note-description"
-            className="note-description"
-            value={setDescription}
-          />
-          <button type="submit" className="add-btn">
-            Add
-          </button>
-        </form>
-      </div>
+   
     );
   }};
 
